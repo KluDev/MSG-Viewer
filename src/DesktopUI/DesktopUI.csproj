@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+        <ApplicationIcon>Assets\msg-icon.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AvaloniaResource Include="Assets\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.0.999-cibuild0031947-beta" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.999-cibuild0031947-beta" />
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.999-cibuild0031947-beta" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.999-cibuild0031947-beta" />
+        <PackageReference Include="FluentAvaloniaUI" Version="2.0.0-preview6" />
+        <PackageReference Include="HanumanInstitute.MvvmDialogs" Version="2.0.0-preview7" />
+        <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia" Version="2.0.0-preview7" />
+        <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia.MessageBox" Version="2.0.0-preview7" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Avalonia.Themes.Fluent">
+            <HintPath>..\..\..\..\..\Users\kluitmannlu\.nuget\packages\avalonia\0.10.18\lib\netcoreapp2.0\Avalonia.Themes.Fluent.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Dialogs\DialogSettingsPage.axaml.cs">
+        <DependentUpon>SettingsPage.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+</Project>
