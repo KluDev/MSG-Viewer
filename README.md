@@ -14,4 +14,5 @@ to select and copy the information shown.
 
 DesktopUI contains the user interface and Infrastructure contains the msg reader.
 
+# Any Ideas
 If you have ideas, issues or suggestions feel free to contact me.
