@@ -18,15 +18,15 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.0.999-cibuild0031947-beta" />
-        <PackageReference Include="Avalonia.Desktop" Version="11.0.999-cibuild0031947-beta" />
+        <PackageReference Include="Avalonia" Version="11.0.999-cibuild0036345-beta" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.999-cibuild0036345-beta" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.999-cibuild0031947-beta" />
-        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.999-cibuild0031947-beta" />
-        <PackageReference Include="FluentAvaloniaUI" Version="2.0.0-preview6" />
-        <PackageReference Include="HanumanInstitute.MvvmDialogs" Version="2.0.0-preview7" />
-        <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia" Version="2.0.0-preview7" />
-        <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia.MessageBox" Version="2.0.0-preview7" />
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.999-cibuild0036345-beta" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.999-cibuild0036345-beta" />
+        <PackageReference Include="FluentAvaloniaUI" Version="2.0.0-rc1" />
+        <PackageReference Include="HanumanInstitute.MvvmDialogs" Version="2.0.0-rc1" />
+        <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia" Version="2.0.0-rc1" />
+        <PackageReference Include="HanumanInstitute.MvvmDialogs.Avalonia.MessageBox" Version="2.0.0-rc1" />
     </ItemGroup>
 
     <ItemGroup>
